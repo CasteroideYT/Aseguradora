@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Aseguradora</string>
+    <string name="hint_ppu">PPU o PATENTE</string>
+    <string name="hint_marca">Marca</string>
+    <string name="hint_modelo">Modelo</string>
+    <string name="hint_año">Año</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="btn_volver">Volver</string>
+    <string name="mensaje_resultado">Su %1$s %2$s con patente %3$s tiene %4$d Años de antigüedad, por lo que %5$s </string>
+    <string name="valor_seguro">El valor del seguro es de $%1$f pesos</string>
+</resources>

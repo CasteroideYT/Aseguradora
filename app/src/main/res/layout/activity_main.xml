@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.espinoza.aseguradora.MainActivity">
+    <Switch
+        android:id="@+id/swt_formato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formato Antiguo"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_PPU">
+        <EditText
+            android:id="@+id/etx_PPU1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="AA"
+            android:selectAllOnFocus="true"
+            android:maxLength="2"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/etx_PPU2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00"
+            android:selectAllOnFocus="true"
+            android:maxLength="2" />
+
+        <EditText
+            android:id="@+id/etx_PPU3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/etx_Marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_marca" />
+    <EditText
+        android:id="@+id/etx_Modelo"
+        android:hint="@string/hint_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_año"/>
+    <NumberPicker
+        android:id="@+id/np_anio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_Calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="ver"
+        android:text="@string/btn_calcular"
+        android:textColor="@color/blanco" />
+</LinearLayout>
