@@ -6,25 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cl.espinoza.aseguradora.MostrarDatos">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imv_Estado"
-            android:maxHeight="50px"
-            android:maxWidth="50px"
-            />
-        <TextView
-            android:id="@+id/txv_DatosAuto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/mensaje_resultado"
-            android:textSize="18sp"
-            android:textStyle="normal|bold" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/txv_DatosAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mensaje_resultado"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
     <TextView
         android:id="@+id/txv_ValorSeguro"
         android:layout_width="wrap_content"
@@ -40,4 +29,7 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/btn_volver"
         android:onClick="salir"/>
+
+
+
 </LinearLayout>

@@ -1,45 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cl.espinoza.aseguradora.MainActivity">
-    <TextView
-        android:id="@+id/txv_Formato"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
+    <Switch
+        android:id="@+id/swt_formato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Formato de patente"/>
-    <ToggleButton
-        android:id="@+id/tgb_formato"
-        android:padding="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textOff="Formato Antiguo"
-        android:textOn="Formato Nuevo"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/blanco"
-        android:layout_below="@+id/txv_Formato"
-        android:layout_alignStart="@+id/txv_Formato"
-        android:layout_centerHorizontal="true"/>
-    <TextView
-        android:id="@+id/txv_Patente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Patente"
-        android:layout_below="@+id/tgb_formato"
-        android:layout_centerHorizontal="true"/>
+        android:text="Formato Antiguo"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/layout_PPU"
-        android:layout_below="@+id/txv_Patente"
-        android:layout_centerHorizontal="true">
+        android:id="@+id/layout_PPU">
         <EditText
             android:id="@+id/etx_PPU1"
             android:layout_width="wrap_content"
@@ -47,16 +22,13 @@
             android:hint="AA"
             android:selectAllOnFocus="true"
             android:maxLength="2"
-            android:textAllCaps="true"
-            android:inputType="textCapCharacters"
-            />
+            android:inputType="text"/>
         <EditText
             android:id="@+id/etx_PPU2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="00"
             android:selectAllOnFocus="true"
-            android:inputType="number"
             android:maxLength="2" />
 
         <EditText
@@ -72,38 +44,26 @@
         android:id="@+id/etx_Marca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_marca"
-        android:layout_below="@+id/layout_PPU"
-        android:layout_centerHorizontal="true"/>
+        android:hint="@string/hint_marca" />
     <EditText
         android:id="@+id/etx_Modelo"
         android:hint="@string/hint_modelo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etx_Marca"
-        android:layout_centerHorizontal="true"/>
+        android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/txv_Anio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hint_año"
-        android:layout_below="@+id/etx_Modelo"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/hint_año"/>
     <NumberPicker
-        android:id="@+id/np_Anio"
+        android:id="@+id/np_anio"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txv_Anio"
-        android:layout_centerHorizontal="true"/>
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btn_Calcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="ver"
         android:text="@string/btn_calcular"
-        android:textColor="@color/blanco"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
+        android:textColor="@color/blanco" />
+</LinearLayout>
