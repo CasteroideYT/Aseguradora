@@ -6,6 +6,11 @@
     <string name="hint_año">Año</string>
     <string name="btn_calcular">Calcular</string>
     <string name="btn_volver">Volver</string>
-    <string name="mensaje_resultado">Su %1$s %2$s con patente %3$s tiene %4$d Años de antigüedad, por lo que %5$s </string>
-    <string name="valor_seguro">El valor del seguro es de $%1$f pesos</string>
+    <string name="mensaje_marcamodelo">%1$s %2$s</string>
+    <string name="mensaje_patente">%1$s</string>
+    <string name="mensaje_resultado">%1$s </string>
+    <string name="valor_seguro">$%1$s pesos</string>
+    <string name="mensaje_menos1antiguedad">menos de 1 año de antigüedad</string>
+    <string name="mensaje_2antiguedad">%1$d años de antigüedad</string>
+    <string name="mensaje_1antiguedad">%1$d año de antigüedad</string>
 </resources>

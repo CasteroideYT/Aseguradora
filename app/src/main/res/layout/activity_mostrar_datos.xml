@@ -1,35 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_original"
     android:orientation="vertical"
+    android:padding="10px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cl.espinoza.aseguradora.MostrarDatos">
-
     <TextView
-        android:id="@+id/txv_DatosAuto"
+        android:id="@+id/txv_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mensaje_resultado"
-        android:textSize="18sp"
-        android:textStyle="normal|bold" />
-    <TextView
-        android:id="@+id/txv_ValorSeguro"
+        android:text="Datos del Vehiculo y seguro"
+        android:textStyle="normal|bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textSize="25sp"
+        />
+    <LinearLayout
+        android:padding="15px"
+        android:id="@+id/layout_patente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/valor_seguro"
-        android:textSize="18sp"
-        android:textStyle="normal|bold" />
-
+        android:layout_below="@+id/txv_titulo"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marcamodelo"/>
+        <TextView
+            android:id="@+id/txv_PatenteAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10px"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+            android:text="@string/mensaje_patente"/>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15px"
+        android:id="@+id/layout_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_patente"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marcamodelo"/>
+        <TextView
+            android:id="@+id/txv_MarcaAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10px"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+            android:text="@string/mensaje_marcamodelo"/>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15px"
+        android:id="@+id/layout_anio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_modelo"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aniovehiculo"/>
+        <TextView
+            android:id="@+id/txv_AntiguedadAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10px"
+            android:textStyle="normal|bold"
+            android:text="Antiguedad"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15px"
+        android:id="@+id/layout_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_anio"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/valido"
+            android:id="@+id/imv_Estado"
+            android:maxHeight="48px"
+            android:maxWidth="48px" />
+        <TextView
+            android:id="@+id/txv_resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mensaje_resultado"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15px"
+        android:id="@+id/layout_valorseguro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_estado"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/valorseguro"/>
+        <TextView
+            android:id="@+id/txv_ValorSeguro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valor_seguro"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
     <Button
         android:id="@+id/btn_Volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         android:text="@string/btn_volver"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:onClick="salir"/>
-
-
-
-</LinearLayout>
+</RelativeLayout>
